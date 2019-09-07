@@ -23,7 +23,8 @@ None.
 ```yaml
 - hosts: all
   roles:
-    - { role: aem_design.docker_available
+    - { 
+      role: aem_design.docker_available
     }
 ```
 
