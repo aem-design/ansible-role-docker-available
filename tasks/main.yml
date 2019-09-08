@@ -4,7 +4,7 @@
   systemd:
     name: docker
     state: started
-    enabled: yes
+    enabled: true
   ignore_errors: true
   changed_when: false
   register: docker_status
