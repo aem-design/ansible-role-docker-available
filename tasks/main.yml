@@ -1,15 +1,5 @@
 ---
 
 - name: test if docker service is running
-  systemd:
-    name: docker
-    state: started
-    enabled: true
-  ignore_errors: true
-  changed_when: false
-  register: docker_status
+  command: python -c "import docker; client = docker.from_env(); print(client.version()['Components'][0]['Version'])"
   no_log: "{{ debug_hide }}"
-
-- name: stop playbok as docker is not running
-  meta: end_play
-  when: not(docker_status.failed)
