@@ -1,5 +1,5 @@
 ---
 
 - name: test if docker service is running
-  command: python -c "import docker; client = docker.from_env(); print(client.version())"
+  command: python -c "import docker; client = docker.APIClient('{{ docker_host }}'); print(client.version())"
   no_log: "{{ debug_hide }}"

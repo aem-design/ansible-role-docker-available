@@ -9,5 +9,6 @@
   roles:
     - {
       role: "{{ role_name }}",
+      docker_host: "unix://tmp/docker.sock",
       debug_hide: false
     }

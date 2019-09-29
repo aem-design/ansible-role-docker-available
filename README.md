@@ -12,7 +12,7 @@ None.
 
 ## Role Variables
 
-None.
+Pass ```docker_host``` for host to test
 
 ## Dependencies
 
